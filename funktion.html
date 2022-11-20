@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function show5Blocks(countBlocks) {
+            for (let x = 1; x<= countBlocks; x++) {
+                document.write('<h2> Header' + x + '</h2>');
+            }
+        }
+        show5Blocks(10);
+
+        let value1 = 10;
+        let value2 = 40;
+        function showMessage() {
+            let value1 = 20;
+            console.log(value1);
+        }
+        showMessage();
+
+        function test() {
+            for (let el of arguments) {
+                console.log(el);
+            }
+        }
+        test(1, 2, 3, 4, 5); //аргументс в скобках
+
+        /*Возврат значений:*/
+        function sum(val1, val2) {
+            return val1 + val2;
+        }
+        console.log(sum(10, 20));
+
+        function generateRandom(min, max) {
+            return Math.trunc(Math.random() * max + min)
+        }
+        console.log(generateRandom(1, 10));
+        
+        function customCalculator(val1, val2, operation) {
+            switch(operation) {
+                case '+':
+                    return `Сумма чисел: ${val1 + val2}`
+                case '-':
+                    return `Разность чисел: ${val1 - val2}`
+                case '/':
+                    return `Отношение чисел: ${val1 / val2}`
+                case '*':
+                    return `Произведение чисел: ${val1 * val2}`
+            }
+        }
+        let result = console.log(customCalculator(2,3, '+'));
+        console.log(result); 
+
+        console.log(customCalculator(2,3, '+'));
+        console.log(customCalculator(2,3, '/'));
+        console.log(customCalculator(2,3, '*'));
+
+        (function(name) {
+            console.log(`Hello!, ${name}`);
+        })(`Ярик`);
+
+        /*Function expression*/
+        let /*Можно const*/ test3 = function(x) {
+            console.log(x);
+        }
+        test3(10);
+    </script>
+</body>
+</html>

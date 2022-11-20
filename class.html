@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1. Написать функцию, которая принимает 2 числа и возвращает меньшее из них.
+        function bolMen(chis1, chis2) {
+            if (chis1 < chis2) {
+                return chis1;
+            } else {
+                return chis2;
+            }
+        }
+        console.log(bolMen(2,5));*/
+        
+        /*2. Написать функцию, которая возводит переданное число
+в указанную степень.
+        function vStep(chis, step) {
+            return Math.pow(chis, step);
+        }
+        console.log(vStep(2,3));*/
+
+        /*3. Написать функцию, которая принимает 2 числа и знак
+(+ - * /), считает пример и возвращает результат.
+        function customCalculator(val1, val2, operation) {
+            switch(operation) {
+                case '+':
+                    return `Сумма чисел: ${val1 + val2}`
+                case '-':
+                    return `Разность чисел: ${val1 - val2}`
+                case '/':
+                    return `Отношение чисел: ${val1 / val2}`
+                case '*':
+                    return `Произведение чисел: ${val1 * val2}`
+            }
+        }
+        console.log(customCalculator(2,3, '+'));*/
+
+        /*4. Написать функцию, которая проверяет, является ли переданное ей число простым.
+        function postChis(chis) {
+            
+            if (chis == 2 || chis == 3 || chis == 5 || chis == 7) {
+                return console.log('Число простое');
+            }
+            
+            for (let i = 2; i <= 9; i++) {
+                if (chis % i ==0) {
+                    console.log('Число не простое');
+                } else {
+                    console.log('Число простое');
+                }
+            }
+        }
+        postChis(13);*/
+
+        /*5. Написать функцию, которая принимает число и выводит
+таблицу умножения для этого числа. Вызовите функцию
+для всех чисел от 2 до 9.
+        function ymnoz(chis) {
+            for (let i = 2; i <= 9; i++) {
+                console.log(chis * i);
+            }
+        }
+        
+        ymnoz(3);*/
+        
+        
+
+        /*6. Написать функцию, которая реализует работу оператора %.
+Функция принимает 2 параметра и возвращает остаток от
+деления первого параметра на второй. В функции использовать только + - * /, оператор % не использовать. 
+        function ostatok(chis1, chis2) {
+            let bom = Math.trunc(chis1 / chis2);
+            return console.log(chis1 - bom*chis2);
+        }
+        ostatok(3,2);*/
+        
+        /*7. Написать функцию, которая принимает от 1 до 5 чисел и
+возвращает их сумму.
+        let pon = 0;
+        function sum() {
+            for (let el of arguments) {
+                pon = pon + el;
+            }
+            return console.log(pon);
+        }
+        sum(2, 5,  8, 5);*/
+        
+        /*8. Написать функцию, которая принимает от 1 до 5 чисел и
+возвращает большее из них.
+        let pon = 0;
+        function bolMen() {
+            for (let el of arguments) {
+                if (pon < el) {
+                    pon = el;
+                }
+            }
+            return console.log(pon);
+        }
+        bolMen(8, 2, 5, 11, 1);*/
+
+        /*9. Написать функцию, которая выводит все четные или нечетные числа, в указанном пользователем диапазоне. Какие
+числа выводить, определяется третьим параметром типа
+bool (true – четные, false – нечетные).
+        function diap(min, max, bel ) {
+            for (let i = min; i <= max; i++) {
+                if (bel == true) {
+                    if (i % 2 == 0) {
+                        console.log(i);
+                    }
+                }   else if ( bel == false) {
+                    if ( i % 2 == 1) {
+                        console.log(i);
+                    }
+                }
+                
+            }
+        }
+        diap(2, 17, false);*/
+
+        /*10. Написать функцию, которая принимает дату (день, месяц,
+год) и возвращает дату следующего дня в виде строки
+«дд.мм.гггг». Проверку на високосный год желательно
+написать отдельной функцией.
+
+        let day = +prompt('День');
+        let mon = +prompt('Месяц');
+        let year = +prompt('Год');
+        function date(day, mon, year) {
+        switch(mon) {
+            case 1: 
+                if (day != 31) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 2:
+                if (  day == 28 && ((year % 4 == 0 || year % 400 == 0) && year % 100 != 0) ) {
+                    day++;
+                } else if ( day == 28 && (year % 4 != 0 || year % 400 != 0) ) {
+                    mon++;
+                    day = 1;
+                } else {
+                    day++;
+                }
+            break;
+            case 3: 
+                if (day != 31) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 4: 
+                if (day != 30) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 5: 
+                if (day != 31) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 6: 
+                if (day != 30) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 7: 
+                if (day != 31) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 8: 
+                if (day != 31) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 9: 
+                if (day != 30) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 10: 
+                if (day != 31) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 11: 
+                if (day != 30) {
+                    day++;
+                } else {
+                    mon++;
+                    day = 1;
+                }
+            break;
+            case 12: 
+                if (day != 31) {
+                    day++;
+                } else {
+                    year++;
+                    mon++;
+                    day = 1;
+                }
+            break;
+            }
+        console.log(day + '.'+ mon + '.' +  year);
+        }
+        date(day, mon, year);*/
+    </script>
+</body>
+</html>
